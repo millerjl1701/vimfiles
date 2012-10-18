@@ -1,0 +1,2 @@
+bundle/vim-fugitive/.gitignore
+bundle/*/*/tags*
