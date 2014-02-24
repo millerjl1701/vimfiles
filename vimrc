@@ -1,10 +1,5 @@
 let mapleader = ","
 
-" set colorscheme
-if &t_Co >= 256 || has('gui_running')
-  colorscheme ir_black
-endif
-
 " Variables for template interpolation
 let email_address = "jeff-l-miller@uiowa.edu"
 let fullname = "Jeffrey Miller"
