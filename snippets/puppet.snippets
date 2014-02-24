@@ -137,7 +137,7 @@ snippet service
 		ensure		=> ${3:running},
 		hasstatus	=> true,
 	}
-#snippet file
-#	file{"${1:path}":
-#		${2}	=> ${3}
-#	}
+snippet file
+	file{"${1:path}":
+		${2}	=> ${3}
+	}
