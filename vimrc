@@ -7,8 +7,7 @@ let company_name = "The University of Iowa"
 let template_date_format_string = "%a %b %d %Y"
 
 filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()          " generate helptag documentation for any existing bundles
+call pathogen#infect()
 syntax on
 filetype plugin indent on
 
