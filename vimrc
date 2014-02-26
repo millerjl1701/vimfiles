@@ -192,3 +192,7 @@ let g:puppet_module_detect=1
 
 " gundo settings
 nnoremap <F5> :GundoToggle<CR>
+
+                                                                                                                                      
+" vim-signify settings                                                          
+let g:signify_vcs_list = [ 'git' ]
