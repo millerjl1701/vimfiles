@@ -189,3 +189,6 @@ let g:puppet_module_detect=1
 " disabled these until upgrade to vim-7.3 happens
 "
 
+
+" gundo settings
+nnoremap <F5> :GundoToggle<CR>
