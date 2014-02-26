@@ -60,8 +60,6 @@ cnoremap %s/ %s/\v
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
-" set jj to map to getting back to insert mode
-inoremap jj <ESC> 
 " insert the current date
 nmap <Leader>_d "=strftime("%Y-%m-%d")<CR>p
 
