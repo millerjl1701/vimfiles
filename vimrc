@@ -27,7 +27,7 @@ set smarttab      " smart tab (shiftwidth v tabstop)
 set tw=0          " no textwidth set by default
 set gdefault      " apply substitutions globally, not just first result
 set cursorline    " underline current line with cursor
-set laststatus=1  " display the status line 
+set laststatus=2  " display the status line 
 
 " search options stuff
 set showmatch     " show matching brackets
