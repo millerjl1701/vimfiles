@@ -146,11 +146,10 @@ let g:EteSkeleton_loosefiletype = 1
 
 
 " surround maps
-nmap <Leader>{ ysiw{
-nmap <Leader>} ysiw}
-nmap <Leader>" ysiw"
-nmap <Leader>' ysiw'
-
+nmap <leader>" cs'"
+nmap <leader>' cs"'
+nmap <leader>} yss}
+nmap <leader>{ yss{
 
 
 
@@ -163,8 +162,8 @@ autocmd! bufwritepost .vimrc source %
 
 
 " git-fugitive shortcuts
-nmap <Leader>g :Gstatus<cr>
-
+nmap <leader>gs :Gstatus<cr>
+nmap <leader>gb :Gblame<cr>
 
 
 
