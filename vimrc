@@ -196,3 +196,6 @@ nnoremap <F5> :GundoToggle<CR>
                                                                                                                                       
 " vim-signify settings                                                          
 let g:signify_vcs_list = [ 'git' ]
+highlight SignifySignAdd    cterm=bold ctermbg=none  ctermfg=119
+highlight SignifySignDelete cterm=bold ctermbg=none  ctermfg=167
+highlight SignifySignChange cterm=bold ctermbg=none  ctermfg=227
