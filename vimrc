@@ -199,3 +199,4 @@ let g:signify_vcs_list = [ 'git' ]
 highlight SignifySignAdd    cterm=bold ctermbg=none  ctermfg=119
 highlight SignifySignDelete cterm=bold ctermbg=none  ctermfg=167
 highlight SignifySignChange cterm=bold ctermbg=none  ctermfg=227
+highlight SignColumn ctermbg=black
