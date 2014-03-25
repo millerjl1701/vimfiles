@@ -17,6 +17,7 @@ Note: The current <leader> character = ,
     <leader>e        => :Error    => sysntastic errors window
     <leader>i        => :set invlist<CR> => toggle invisible character display
     <leader>N        => :NERDtree  => open NERDtree window
+    <leader>T        => :Tabularize /=<CR> => tabularize / lineup the = signs
     <leader>W        => :%s/\v\s+$//g<cr>  => remove trailing white spaces
 
 

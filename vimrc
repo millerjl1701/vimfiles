@@ -111,7 +111,8 @@ if &term =~ "screen"
   set icon
 endif
 
-
+" Tabularize shortcuts
+nmap <Leader>T :Tabularize /=<cr>
 
 
 " NERDTree settings
