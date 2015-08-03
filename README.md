@@ -10,3 +10,6 @@ If you use this, the bundles are implemented as git submodules. To complete the 
 
 It may be that most (if not all) of the submodules are running in a headless state.
 Each should be checked out to the master branch and then run a git pull to ensure there are no other updates available.
+
+If you want to update all submodules at once:
+    git submodule foreach git pull
