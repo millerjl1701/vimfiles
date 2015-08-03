@@ -31,6 +31,6 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
-[submodule "vim-snippets"]
+[submodule "bundle/vim-snippets"]
 	path = vim-snippets
 	url = https://github.com/honza/vim-snippets
