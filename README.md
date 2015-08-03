@@ -12,4 +12,5 @@ It may be that most (if not all) of the submodules are running in a headless sta
 Each should be checked out to the master branch and then run a git pull to ensure there are no other updates available.
 
 If you want to update all submodules at once:
+
     git submodule foreach git pull
