@@ -27,7 +27,7 @@ set smarttab      " smart tab (shiftwidth v tabstop)
 set tw=0          " no textwidth set by default
 set gdefault      " apply substitutions globally, not just first result
 set cursorline    " underline current line with cursor
-set laststatus=2  " display the status line 
+set laststatus=2  " display the status line
 
 " search options stuff
 set showmatch     " show matching brackets
@@ -107,6 +107,7 @@ endif
 
 " Tabularize shortcuts
 nmap <Leader>T :Tabularize /=><cr>
+nmap <Leader>= :Tabularize /=<cr>
 
 
 " NERDTree settings
@@ -137,8 +138,6 @@ let g:EteSkeleton_loosefiletype = 1
 " surround maps
 nmap <leader>" cs'"
 nmap <leader>' cs"'
-nmap <leader>} yss}
-nmap <leader>{ yss{
 
 
 " open vimrc in new vsplit for quick config changes
@@ -153,17 +152,21 @@ nmap <leader>gb :Gblame<cr>
 
 
 
-" syntastic module settings
+" syntastic module settings recommended settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " map for syntastic errors window
 nnoremap <LEADER>e :Errors<CR>
-" autoclose syntastic's error windown when no errors
-let g:syntastic_auto_loc_list=2
 " syntastic checking mode
-let g:syntastic_mode_map = { 'mode': 'active',                              
-      \ 'active_filetypes': ['ruby', 'python', 'perl', 'shell', 'puppet' ],           
+let g:syntastic_mode_map = { 'mode': 'active',
+      \ 'active_filetypes': ['ruby', 'python', 'perl', 'shell', 'puppet' ],
             \ 'passive_filetypes': ['php', 'html'] }
-" check syntax on file open
-"let g:syntastic_check_on_open=1
 " enable puppet module detection
 let g:puppet_module_detect=1
 
@@ -171,8 +174,8 @@ let g:puppet_module_detect=1
 " gundo settings
 nnoremap <F5> :GundoToggle<CR>
 
-                                                                                                                                      
-" vim-signify settings                                                          
+
+" vim-signify settings
 let g:signify_vcs_list = [ 'git' ]
 highlight SignifySignAdd    cterm=bold ctermbg=none  ctermfg=119
 highlight SignifySignDelete cterm=bold ctermbg=none  ctermfg=167
