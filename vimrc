@@ -37,31 +37,27 @@ set incsearch     " move curser as you type search terms
 set autoread      " auto read in files that have changed underneath
 set ignorecase    " with next line, mixed case searches are case sensitive
 set smartcase	    " searches in all lower case are case insensitive
+
+
 " press leader space to clear highlighting of searches
 nnoremap <leader><space> :noh<cr>
+
+
 " add \v to all searches to support regular perl style regex
 nnoremap / /\v
 vnoremap / /\v
 cnoremap %s/ %s/\v
 
-" unmap arrow keys on keyboard.... UNLESS enabling arrows for window commands
-" in other section of this file...
-" nnoremap <up> <nop>
-" nnoremap <down> <nop>
-" nnoremap <left> <nop>
-" nnoremap <right> <nop>
-" inoremap <up> <nop>
-" inoremap <down> <nop>
-" inoremap <left> <nop>
-" inoremap <right> <nop>
-" nnoremap j gj
-" nnoremap k gk
+
 " unmap F1 - stupid help key
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
+
+
 " insert the current date
 nmap <Leader>_d "=strftime("%Y-%m-%d")<CR>p
+
 
 set shellcmdflag=-ic  " set the ! shell to be a login shell to get at functions and aliases
 
@@ -78,20 +74,18 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-" use these mappings when using hjkl pattern instead of arrows
-" split window movement mappings
-" nmap <silent> <A-Up> :wincmd k<CR>
-" nmap <silent> <A-Down> :wincmd j<CR>
-" nmap <silen> <A-Left> :wincmd h<CR>
-" nmap <silent> <A-Right> :wincmd l<CR>
+
+
 set nomousefocus        " focus does not follow mouse
 set splitbelow    " a new window is put below the current one
 set splitright    " a new vertical window is right of the current one
+
 
 " map to remove trailing whitespace from lines
 nnoremap <silent><leader>W :%s/\v\s+$//g<cr>
 " map to toggle invisible character display
 nnoremap <silent><Leader>i :set invlist<CR>
+
 
 " turn on syntax if we are in a color terminal
 if &t_Co > 1
@@ -120,6 +114,7 @@ autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 nmap <Leader>N :NERDTree<cr>
 
+
 " NERD Commenter Settings
 let NERDSpaceDelims = 1
 let g:NERDCustomDelimiters = {
@@ -130,20 +125,13 @@ let NERDCompactSexyComs = 0
 let NERDSexyComMarker = ""
 
 
-
-
 " Scratch settings
 nmap <Leader>s :Scratch<cr>
 nmap <Leader>S :Sscratch<cr>
 
-
-
-
 " allow loose skeleton matching for templates
 " ie init.pp (a puppet filetype) will match init_puppet
 let g:EteSkeleton_loosefiletype = 1
-
-
 
 
 " surround maps
@@ -153,13 +141,10 @@ nmap <leader>} yss}
 nmap <leader>{ yss{
 
 
-
 " open vimrc in new vsplit for quick config changes
 nmap <leader>v :tabnew ~/.vimrc<cr>:lcd ~/.vim<cr>
 " " auto source it on save
 autocmd! bufwritepost .vimrc source %
-
-
 
 
 " git-fugitive shortcuts
