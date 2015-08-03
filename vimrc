@@ -112,7 +112,7 @@ if &term =~ "screen"
 endif
 
 " Tabularize shortcuts
-nmap <Leader>T :Tabularize /=<cr>
+nmap <Leader>T :Tabularize /=><cr>
 
 
 " NERDTree settings
@@ -181,14 +181,6 @@ let g:syntastic_mode_map = { 'mode': 'active',
 "let g:syntastic_check_on_open=1
 " enable puppet module detection
 let g:puppet_module_detect=1
-
-
-
-
-" map the align command to align fat comma's, do need to visual select first
-" vmap <LEADER>= :Align =><CR>
-" disabled these until upgrade to vim-7.3 happens
-"
 
 
 " gundo settings
