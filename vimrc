@@ -111,7 +111,7 @@ nmap <Leader>= :Tabularize /=<cr>
 
 
 " NERDTree settings
-autocmd vimenter * NERDTree
+autocmd vimenter * NERDTree | wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 nmap <Leader>N :NERDTree<cr>
 
