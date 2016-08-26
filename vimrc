@@ -173,7 +173,7 @@ let g:puppet_module_detect=1
 
 
 " gundo settings
-nnoremap <F5> :GundoToggle<CR>
+nnoremap <F4> :GundoToggle<CR>
 
 
 " vim-signify settings

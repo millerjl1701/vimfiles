@@ -9,7 +9,9 @@ Note: The current <leader> character = ,
 
 ### Function keys
     <F1>  => <ESC>
-    <F5>  => :GundoToggle<CR>    => toggle the Gundo window
+    <F4>  => :GundoToggle<CR>    => toggle the Gundo window
+    <F5>  => CtrlP to purge the cache for the current directory to get new
+              files, remove deleted files and apply new ignore options.
 
 ### Miscellaneous
     <leader><space>  => :noh                          => clear search highlighting
