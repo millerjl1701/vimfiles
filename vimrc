@@ -61,10 +61,10 @@ nmap <Leader>_d "=strftime("%Y-%m-%d")<CR>p
 
 set shellcmdflag=-ic  " set the ! shell to be a login shell to get at functions and aliases
 
-if version >= 703
-  set colorcolumn=80    " highlight the 80th column
-  set listchars=nbsp:¶,eol:¬,tab:>-,extends:»,precedes:«,trail:• " characters to use for 'specical' characters and non-printables
-endif
+"if version >= 703
+"  set colorcolumn=80    " highlight the 80th column
+"  set listchars=nbsp:¶,eol:¬,tab:>-,extends:»,precedes:«,trail:• " characters to use for 'specical' characters and non-printables
+"endif
 
 
 " split window settings
@@ -182,3 +182,8 @@ highlight SignifySignAdd    cterm=bold ctermbg=none  ctermfg=119
 highlight SignifySignDelete cterm=bold ctermbg=none  ctermfg=167
 highlight SignifySignChange cterm=bold ctermbg=none  ctermfg=227
 highlight SignColumn ctermbg=black
+
+" Gist settings
+let g:gist_post_anonymous = 1
+let g:gist_clip_command = 'pbcopy'
+let g:gist_open_browser_after_post = 1
