@@ -28,6 +28,7 @@ set tw=0          " no textwidth set by default
 set gdefault      " apply substitutions globally, not just first result
 set cursorline    " underline current line with cursor
 set laststatus=2  " display the status line
+set number
 
 " search options stuff
 set showmatch     " show matching brackets
@@ -114,6 +115,7 @@ nmap <Leader>= :Tabularize /=<cr>
 autocmd vimenter * NERDTree | wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 nmap <Leader>N :NERDTree<cr>
+let NERDTreeIgnore = ['\.pyc$']
 
 
 " NERD Commenter Settings
@@ -161,6 +163,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_eruby_ruby_quiet_messages = {"regex": "possibly useless use of a variable in void context"}
+let g:syntastic_python_checkers = ['flake8']
 
 " map for syntastic errors window
 nnoremap <LEADER>e :Errors<CR>
