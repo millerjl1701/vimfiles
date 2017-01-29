@@ -164,6 +164,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_eruby_ruby_quiet_messages = {"regex": "possibly useless use of a variable in void context"}
 let g:syntastic_python_checkers = ['flake8']
+let python_highlight_all=1
 
 " map for syntastic errors window
 nnoremap <LEADER>e :Errors<CR>
