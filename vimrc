@@ -196,3 +196,8 @@ let g:vim_markdown_folding_disabled = 1
 " ansible settings
 au BufRead,BufNewFile */playbooks/*.yml set filetype=yaml.ansible
 au BufRead,BufNewFile */inventories/*.yml set filetype=yaml.ansible
+
+" terraform settings
+let g:terraform_fmt_on_save=1
+let g:terraform_fold_sections=1
+let g:terraform_remap_spacebar=1
