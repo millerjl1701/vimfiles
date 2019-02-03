@@ -52,3 +52,6 @@
 [submodule "bundle/vim-terraform"]
 	path = bundle/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
+[submodule "bundle/ansible-vim"]
+	path = bundle/ansible-vim
+	url = https://github.com/pearofducks/ansible-vim

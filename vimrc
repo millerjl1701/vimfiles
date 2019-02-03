@@ -192,3 +192,6 @@ let g:gist_clip_command = 'pbcopy'
 let g:gist_open_browser_after_post = 1
 
 let g:vim_markdown_folding_disabled = 1
+
+" ansible settings
+au BufRead,BufNewFile */playbooks/*.yml set filetype=yaml.ansible
