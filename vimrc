@@ -195,3 +195,4 @@ let g:vim_markdown_folding_disabled = 1
 
 " ansible settings
 au BufRead,BufNewFile */playbooks/*.yml set filetype=yaml.ansible
+au BufRead,BufNewFile */inventories/*.yml set filetype=yaml.ansible
