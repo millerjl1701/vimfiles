@@ -1,9 +1,8 @@
 let mapleader = ","
 
 " Variables for template interpolation
-let email_address = "jeff-l-miller@uiowa.edu"
+let email_address = "millerjl1701@gmail.com"
 let fullname = "Jeffrey Miller"
-let company_name = "The University of Iowa"
 let template_date_format_string = "%a %b %d %Y"
 
 filetype off
