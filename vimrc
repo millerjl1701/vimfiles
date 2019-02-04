@@ -114,6 +114,7 @@ nmap <Leader>= :Tabularize /=<cr>
 autocmd vimenter * NERDTree | wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 nmap <Leader>N :NERDTree<cr>
+nmap <C-n> :NERDTreeToggle<cr>
 let NERDTreeIgnore = ['\.pyc$']
 
 
