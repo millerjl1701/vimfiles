@@ -85,6 +85,8 @@ set splitright    " a new vertical window is right of the current one
 nnoremap <silent><leader>W :%s/\v\s+$//g<cr>
 " map to toggle invisible character display
 nnoremap <silent><Leader>i :set invlist<CR>
+" toggle line numbers
+nnoremap <silent><Leader>ln :set invnumber<CR>
 
 
 " turn on syntax if we are in a color terminal
@@ -142,6 +144,10 @@ nmap <leader>gs :Gstatus<cr>
 nmap <leader>gb :Gblame<cr>
 
 
+" gitgutter settings
+set updatetime=100
+nmap <leader>gg :GitGutterToggle<cr>
+
 
 " syntastic module settings recommended settings
 set statusline+=%#warningmsg#
@@ -155,6 +161,7 @@ let g:syntastic_eruby_ruby_quiet_messages = {"regex": "possibly useless use of a
 let g:syntastic_python_checkers = ['flake8']
 let python_highlight_all=1
 
+
 " map for syntastic errors window
 nnoremap <LEADER>e :Errors<CR>
 " syntastic checking mode
@@ -163,14 +170,6 @@ let g:syntastic_mode_map = { 'mode': 'active',
             \ 'passive_filetypes': ['php', 'html'] }
 " enable puppet module detection
 let g:puppet_module_detect=1
-
-
-" vim-signify settings
-let g:signify_vcs_list = [ 'git' ]
-highlight SignifySignAdd    cterm=bold ctermbg=none  ctermfg=119
-highlight SignifySignDelete cterm=bold ctermbg=none  ctermfg=167
-highlight SignifySignChange cterm=bold ctermbg=none  ctermfg=227
-highlight SignColumn ctermbg=black
 
 
 " ansible settings
