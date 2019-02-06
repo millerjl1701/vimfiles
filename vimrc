@@ -89,7 +89,7 @@ nnoremap <silent><Leader>i :set invlist<CR>
 
 " turn on syntax if we are in a color terminal
 if &t_Co > 1
-	syntax on
+  syntax on
 endif
 
 au FocusLost * :wa
@@ -116,6 +116,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 nmap <Leader>N :NERDTree<cr>
 nmap <C-n> :NERDTreeToggle<cr>
 let NERDTreeIgnore = ['\.pyc$']
+" fix for issue addressed:
+"   https://www.reddit.com/r/vim/comments/a4yzyt/g_characters_prefixing_directory_and_file_names/
+let g:NERDTreeNodeDelimiter = "\u00a0"
 
 
 " NERD Commenter Settings
