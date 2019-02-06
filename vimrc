@@ -175,10 +175,6 @@ let g:syntastic_mode_map = { 'mode': 'active',
 let g:puppet_module_detect=1
 
 
-" gundo settings
-nnoremap <F4> :GundoToggle<CR>
-
-
 " vim-signify settings
 let g:signify_vcs_list = [ 'git' ]
 highlight SignifySignAdd    cterm=bold ctermbg=none  ctermfg=119
