@@ -1,7 +1,7 @@
 Keyboard Mappings
 =================
 
-This is a listing of the current keymappings in the vimrc.
+This is a listing of some keymappings in the vimrc.
 
 
 Note: The current <leader> character = ,
@@ -9,7 +9,6 @@ Note: The current <leader> character = ,
 
 ### Function keys
     <F1>  => <ESC>
-    <F4>  => :GundoToggle<CR>    => toggle the Gundo window
     <F5>  => CtrlP to purge the cache for the current directory to get new
               files, remove deleted files and apply new ignore options.
 
