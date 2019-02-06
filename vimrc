@@ -121,16 +121,6 @@ let NERDTreeIgnore = ['\.pyc$']
 let g:NERDTreeNodeDelimiter = "\u00a0"
 
 
-" NERD Commenter Settings
-let NERDSpaceDelims = 1
-let g:NERDCustomDelimiters = {
-  \ 'puppet': { 'left': '#', 'leftAlt': '/*', 'rightAlt': '*/' }
-  \ }
-let NERDAllowAnyVisualDelims = 1
-let NERDCompactSexyComs = 0
-let NERDSexyComMarker = ""
-
-
 " Scratch settings
 nmap <Leader>s :Scratch<cr>
 nmap <Leader>S :Sscratch<cr>
