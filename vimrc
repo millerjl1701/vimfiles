@@ -173,11 +173,10 @@ highlight SignifySignChange cterm=bold ctermbg=none  ctermfg=227
 highlight SignColumn ctermbg=black
 
 
-let g:vim_markdown_folding_disabled = 1
-
 " ansible settings
 au BufRead,BufNewFile */playbooks/*.yml set filetype=yaml.ansible
 au BufRead,BufNewFile */inventories/*.yml set filetype=yaml.ansible
+
 
 " terraform settings
 let g:terraform_fmt_on_save=1
