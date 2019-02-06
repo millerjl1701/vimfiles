@@ -135,10 +135,6 @@ let NERDSexyComMarker = ""
 nmap <Leader>s :Scratch<cr>
 nmap <Leader>S :Sscratch<cr>
 
-" allow loose skeleton matching for templates
-" ie init.pp (a puppet filetype) will match init_puppet
-let g:EteSkeleton_loosefiletype = 1
-
 
 " surround maps
 nmap <leader>" cs'"
