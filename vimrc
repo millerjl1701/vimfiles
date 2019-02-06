@@ -172,10 +172,6 @@ highlight SignifySignDelete cterm=bold ctermbg=none  ctermfg=167
 highlight SignifySignChange cterm=bold ctermbg=none  ctermfg=227
 highlight SignColumn ctermbg=black
 
-" Gist settings
-let g:gist_post_anonymous = 1
-let g:gist_clip_command = 'pbcopy'
-let g:gist_open_browser_after_post = 1
 
 let g:vim_markdown_folding_disabled = 1
 
