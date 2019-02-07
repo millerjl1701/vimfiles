@@ -6,7 +6,7 @@ let fullname = "Jeffrey Miller"
 let template_date_format_string = "%a %b %d %Y"
 
 filetype off
-call pathogen#infect()
+execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
