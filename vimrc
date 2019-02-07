@@ -120,7 +120,7 @@ nmap <C-n> :NERDTreeToggle<cr>
 let NERDTreeIgnore = ['\.pyc$']
 " fix for issue addressed:
 "   https://www.reddit.com/r/vim/comments/a4yzyt/g_characters_prefixing_directory_and_file_names/
-let g:NERDTreeNodeDelimiter = "\u00a0"
+" let g:NERDTreeNodeDelimiter = "\u00a0"
 
 
 " Scratch settings
