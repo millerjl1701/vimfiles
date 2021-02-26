@@ -27,7 +27,9 @@ set tw=0          " no textwidth set by default
 set gdefault      " apply substitutions globally, not just first result
 set cursorline    " underline current line with cursor
 set laststatus=2  " display the status line
-set number
+set relativenumber
+
+set pastetoggle=<F2>
 
 " search options stuff
 set showmatch     " show matching brackets
@@ -88,7 +90,6 @@ nnoremap <silent><Leader>i :set invlist<CR>
 " toggle line numbers
 nnoremap <silent><Leader>ln :set invnumber<CR>
 
-
 " turn on syntax if we are in a color terminal
 if &t_Co > 1
   syntax on
@@ -113,14 +114,14 @@ nmap <Leader>= :Tabularize /=<cr>
 
 
 " NERDTree settings
-autocmd vimenter * NERDTree | wincmd p
+" autocmd vimenter * NERDTree | wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 nmap <Leader>N :NERDTree<cr>
 nmap <C-n> :NERDTreeToggle<cr>
 let NERDTreeIgnore = ['\.pyc$']
 " fix for issue addressed:
 "   https://www.reddit.com/r/vim/comments/a4yzyt/g_characters_prefixing_directory_and_file_names/
-" let g:NERDTreeNodeDelimiter = "\u00a0"
+let g:NERDTreeNodeDelimiter = "\u00a0"
 
 
 " Scratch settings
@@ -149,6 +150,13 @@ set updatetime=100
 nmap <leader>gg :GitGutterToggle<cr>
 
 
+" vim-json settings
+let g:vim_json_syntax_conceal = 0
+
+" snipmate settings
+let g:snipMate = {'snippet_version': 1}
+
+
 " syntastic module settings recommended settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -171,13 +179,8 @@ let g:syntastic_mode_map = { 'mode': 'active',
 " enable puppet module detection
 let g:puppet_module_detect=1
 
-
-" ansible settings
-au BufRead,BufNewFile */playbooks/*.yml set filetype=yaml.ansible
-au BufRead,BufNewFile */inventories/*.yml set filetype=yaml.ansible
-
-
 " terraform settings
-let g:terraform_fmt_on_save=1
+let g:terraform_align=1
+let g:terraform_fmt_on_save=0
 let g:terraform_fold_sections=1
 let g:terraform_remap_spacebar=1
