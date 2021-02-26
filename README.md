@@ -1,33 +1,53 @@
-vimfiles
-========
+# vimfiles
 
-This is my current working .vim directory for doing puppet manifest development... Your mileage may vary.
-If you use this, the bundles are implemented as git submodules. To complete the clone:
+This is my current working .vim directory for puppet, k8s, and terraform work. Your mileage may vary.
 
-    git submodule init
-    git submodule update
-    git submodule status
+## Setup for Use
 
-It may be that most (if not all) of the submodules are running in a headless state.
-Each should be checked out to the master branch and then run a git pull to ensure there are no other updates available.
+Vim plugins are added primarily using [vim-pathogen](https://github.com/tpope/vim-pathogen). Since plugins are added as git submodules, clone the repository with a workflow similar to:
 
-If you want to update all submodules at once:
+```bash
+cd
+git clone https://github.com/millerjl1701/vimfiles.git .vim
+cd .vim/
+git submodule init
+git submodule update
+git submodule status
+```
 
-    git submodule foreach git pull
+It may be that most (if not all) of the submodules are running in a headless state. Each should be checked out to the master branch and then run a git pull to ensure there are no other updates available:
 
-To add a submodule:
+```bash
+cd ~/.vim/bundle
+for i in `ls` ; do cd $i; git checkout master; git pull; cd ../; done
+```
 
-    git submodule add https://github.com/user/reponame bundle/reponame
-    git commit -a -m "added module name"
+## Plugin Updates
 
-To remove a submodule you need to:
+To update all plugins:
 
-    Delete the relevant section from the .gitmodules file.
-    Stage the .gitmodules changes git add .gitmodules
-    Delete the relevant section from .git/config.
-    Run git rm --cached path_to_submodule (no trailing slash).
-    Run rm -rf .git/modules/path_to_submodule
-    Commit git commit -m "Removed submodule <name>"
-    Delete the now untracked submodule files
-    rm -rf path_to_submodule
+```bash
+cd ~/.vim/bundle
+for i in `ls` ; do cd $i; git pull; cd ../; done
+```
 
+## Adding a Plugin
+
+To add a plugin:
+
+```bash
+git submodule add https://github.com/user/reponame bundle/reponame
+git commit -a -m "added module name"
+```
+
+## Removing a Plugin
+
+To remove a plugin you need to:
+
+- Delete the relevant section from the `.gitmodules` file
+- Stage the `.gitmodules` changes with `git add .gitmodules`
+- Delete the relevant section from: `.git/config`
+- Run `git rm --cached bundle/reponame` with no trailing slash
+- Run `rm -rf .git/modules/reponame`
+- Commit all changes
+- Delete the now untracked submodule: `rm -rf bundle/reponame`
